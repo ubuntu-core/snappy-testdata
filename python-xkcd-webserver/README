@@ -1,0 +1,21 @@
+Hello world,
+
+
+to build this package you just need "snappy-tools" installed on your system and run:
+
+ $ snappy build .
+
+to produce your snappy package that you can install on your local snappy VM.
+
+Alternatively, you can intall it using 
+
+ $ snappy intall example.python-xkcd-webserver
+
+on your running snappy instance.
+
+
+Enjoy,
+
+ - Your Snappy Team
+
+

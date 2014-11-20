@@ -1,0 +1,29 @@
+#include <tunables/global>
+
+profile ${CLICK_PACKAGE_ID} ${CLICK_PACKAGE_PATH}/bin/xkcd-webserver {
+        
+  #include <abstractions/base>
+  #include <abstractions/nameservice>
+  #include <abstractions/user-tmp>
+
+  # global namespaces
+  network inet stream,
+  network unix stream,
+  network inet6 stream,
+
+  # files
+  /etc/ld.so.cache    r,
+  /etc/writable/localtime r,
+  /lib/** r,
+  /dev/urandom r,
+  /usr/bin/python3 ixr,
+  /proc/meminfo r,
+  /usr/lib/python3** r,
+  /etc/mime.types r,
+
+  # glob for the ro install directory
+  ${CLICK_PACKAGE_PATH}/   r,
+  ${CLICK_PACKAGE_PATH}/** mrklix,
+
+
+}

@@ -1,0 +1,7 @@
+{
+    "unit_description": "xkcd webserver",
+    "service_execstart": "${CLICK_PACKAGE_PATH}/bin/xkcd-webserver",
+    "service_workingdirectory": "${CLICK_PACKAGE_PATH}/www",
+    "service_apparmorprofile": "${CLICK_PACKAGE_PATH}/data/xkcd-webserver.apparmor",
+    "service_environment": "PYTHONDONTWRITEBYTECODE=1"
+}

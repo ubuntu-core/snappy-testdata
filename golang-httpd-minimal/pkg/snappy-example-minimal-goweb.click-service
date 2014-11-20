@@ -1,0 +1,7 @@
+{
+    "unit_description": "snappy example: golang mini webserver",
+    "service_execstart": "${CLICK_PACKAGE_PATH}/click-example-golang-miniweb",
+    "service_workingdirectory": "${CLICK_PACKAGE_PATH}/www",
+    "service_apparmorprofile": "${CLICK_PACKAGE_PATH}/xkcd-webserver.apparmor",
+    "service_environment": "PYTHONDONTWRITEBYTECODE=1"
+}

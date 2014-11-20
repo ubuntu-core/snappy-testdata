@@ -1,0 +1,13 @@
+{
+    "description": "Minimal Golang webserver for snappy",
+    "framework": "ubuntu-core-15.04-dev1",
+    "hooks": {
+        "httpd": {
+            "systemd": "snappy-example-minimal-goweb.click-service"
+        }
+    },
+    "maintainer": "Sergio Scheznov <sergiusens@ubuntu.com>",
+    "name": "com.ubuntu.developer.sergiusens.snappy-example-minimal-goweb",
+    "title": "Snapp Example: Minimal Go Webserver",
+    "version": "1.0"
+}
