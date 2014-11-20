@@ -7,7 +7,7 @@
         }
     },
     "maintainer": "Sergio Scheznov <sergiusens@ubuntu.com>",
-    "name": "com.ubuntu.developer.sergiusens.snappy-example-minimal-goweb",
-    "title": "Snapp Example: Minimal Go Webserver",
+    "name": "com.ubuntu.snappy.example.golang-httpd-minimal",
+    "title": "Snappy Example: Minimal Go Webserver",
     "version": "1.0"
 }
