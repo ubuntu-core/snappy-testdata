@@ -9,5 +9,6 @@
     "maintainer": "Alexander Sack <asac@ubuntu.com>",
     "name": "com.ubuntu.snappy.example.golang-httpd-minimal",
     "title": "Snappy Example: Minimal Go Webserver",
-    "version": "1.0"
+    "architecture": "amd64",
+    "version": "1.0.1"
 }
