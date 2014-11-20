@@ -6,7 +6,7 @@
             "systemd": "snappy-example-minimal-goweb.click-service"
         }
     },
-    "maintainer": "Sergio Scheznov <sergiusens@ubuntu.com>",
+    "maintainer": "Alexander Sack <asac@ubuntu.com>",
     "name": "com.ubuntu.snappy.example.golang-httpd-minimal",
     "title": "Snappy Example: Minimal Go Webserver",
     "version": "1.0"
