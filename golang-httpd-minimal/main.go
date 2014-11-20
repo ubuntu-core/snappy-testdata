@@ -9,8 +9,8 @@ import (
 func main() {
 	http.HandleFunc("/", handleMainPage)
 
-	log.Println("Starting webserver on :9999")
-	if err := http.ListenAndServe(":9999", nil); err != nil {
+	log.Println("Starting webserver on :80")
+	if err := http.ListenAndServe(":80", nil); err != nil {
 		log.Fatal("http.ListendAndServer() failed with %s\n", err)
 	}
 }

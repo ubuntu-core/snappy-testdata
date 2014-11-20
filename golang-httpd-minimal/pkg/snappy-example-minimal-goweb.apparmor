@@ -1,6 +1,6 @@
 #include <tunables/global>
 
-profile ${CLICK_PACKAGE_ID} ${CLICK_PACKAGE_PATH}/click-example-golang-miniweb {
+profile ${CLICK_PACKAGE_ID} ${CLICK_PACKAGE_PATH}/golang-httpd-minimal {
         
   #include <abstractions/base>
   #include <abstractions/nameservice>
