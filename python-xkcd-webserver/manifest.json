@@ -9,5 +9,5 @@
     "maintainer": "Michael Vogt <michael.vogt@ubuntu.com>",
     "name": "com.ubuntu.snappy.example.python-xkcd-webserver",
     "title": "XKCD comic display",
-    "version": "0.2"
+    "version": "0.2.1"
 }

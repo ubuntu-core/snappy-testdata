@@ -38,5 +38,5 @@ if __name__ == "__main__":
       else:
             port = 80
 
-      httpd = HTTPServer(('127.0.0.1', port), XkcdRequestHandler)
+      httpd = HTTPServer(('', port), XkcdRequestHandler)
       httpd.serve_forever()
