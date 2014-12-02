@@ -1,0 +1,11 @@
+name: golang-httpd-minimal
+frameworks: ubuntu-core-15.04-dev1
+maintainer: Alexander Sack <asac@ubuntu.com>
+architecture: amd64
+version: 1.0.1
+hooks:
+ httpd:
+  systemd: snappy-example-minimal-goweb.click-service
+ports:
+ required: 80
+
