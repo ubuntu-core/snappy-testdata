@@ -3,7 +3,6 @@ version: 1.0
 maintainer: Michael Vogt <mvo@ubuntu.com>
 icon: meta/hello.svg
 framework: ubuntu-core-15.04-dev1
-integration:
- hello:
-  bin-path: bin/hello
+binaries:
+ - name: bin/hello
 
