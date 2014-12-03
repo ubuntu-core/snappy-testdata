@@ -6,9 +6,8 @@ in golang for snappy.
 
 Just follow these steps and you are all set to start innovating in the snappy world:
 
- 1. cd pkg/
- 2. go build ..
- 3. click build
+ 1. go build .
+ 2. snappy build .
 
 This produces a snappy package for you that you can try on your snappy system.
 
