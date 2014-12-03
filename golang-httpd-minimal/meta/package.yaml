@@ -1,8 +1,8 @@
 name: golang-httpd-minimal
 frameworks: ubuntu-core-15.04-dev1
-maintainer: Alexander Sack <asac@canonical.com>
+vendor: Alexander Sack <asac@canonical.com>
 architecture: amd64
-icon: go.svg
+icon: meta/go.svg
 version: 1.0.1
 services:
  - name: webserver

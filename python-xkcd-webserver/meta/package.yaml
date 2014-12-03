@@ -1,7 +1,7 @@
 name: xkcd-webserver
 version: 0.3
 frameworks: ubuntu-core-15.04-dev1
-maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+vendor: Michael Vogt <michael.vogt@ubuntu.com>
 icon: meta/xkcd.svg
 services:
  - name: xkcd-webserver
