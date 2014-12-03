@@ -2,9 +2,13 @@ name: xkcd-webserver
 version: 0.3
 frameworks: ubuntu-core-15.04-dev1
 maintainer: Michael Vogt <michael.vogt@ubuntu.com>
-icon: data/xkcd.svg
-hooks:
- httpd:
-  systemd: data/xkcd-webserver.click-service
+icon: meta/xkcd.svg
+services:
+ - name: xkcd-webserver
+   start: bin/xkcd-webserver 
+integration:
+ xkcd-webserver:
+  apparmor: meta/xkcd-webserver.apparmor
 ports:
  required: 80
+  
