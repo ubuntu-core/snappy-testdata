@@ -1,4 +1,4 @@
-name: golang-httpd-minimal
+name: httpd-minimal-golang-example
 frameworks: ubuntu-core-15.04-dev1
 vendor: Alexander Sack <asac@canonical.com>
 architecture: amd64
@@ -7,7 +7,7 @@ version: 1.0.1
 services:
  - name: webserver
    description: "snappy example: golang mini webserver"
-   start: ./golang-httpd-minimal
+   start: ./golang-httpd-minimal-example
 ports:
  required: 80
 
