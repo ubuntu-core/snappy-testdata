@@ -1,14 +1,11 @@
 name: xkcd-webserver
-version: 0.3
+version: 0.3.1
 frameworks: ubuntu-core-15.04-dev1
 vendor: Michael Vogt <michael.vogt@ubuntu.com>
 icon: meta/xkcd.svg
 services:
  - name: xkcd-webserver
    start: bin/xkcd-webserver 
-integration:
- xkcd-webserver:
-  apparmor: meta/xkcd-webserver.apparmor
 ports:
  required: 80
   
