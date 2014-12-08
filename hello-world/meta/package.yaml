@@ -1,8 +1,7 @@
 name: hello-world
-version: 1.0
+version: 1.0.1
 vendor: Michael Vogt <mvo@ubuntu.com>
 icon: meta/hello.svg
-frameworks: ubuntu-core-15.04-dev1
 binaries:
  - name: bin/hello
 

@@ -1,5 +1,4 @@
 name: httpd-minimal-golang-example
-frameworks: ubuntu-core-15.04-dev1
 vendor: Alexander Sack <asac@canonical.com>
 architecture: amd64
 icon: meta/go.svg
