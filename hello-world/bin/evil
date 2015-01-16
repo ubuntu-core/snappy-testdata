@@ -1,0 +1,7 @@
+#!/bin/sh
+
+set -e
+echo "Hello Evil World!"
+
+echo "Haha" > /tmp/myevil.txt
+
