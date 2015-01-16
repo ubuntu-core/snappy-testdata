@@ -1,8 +1,9 @@
 name: hello-world
-version: 1.0.2
+version: 1.0.3
 vendor: Michael Vogt <mvo@ubuntu.com>
 icon: meta/hello.svg
 binaries:
  - name: bin/echo
  - name: bin/env
+ - name: bin/evil
 
