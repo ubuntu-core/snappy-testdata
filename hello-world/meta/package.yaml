@@ -1,5 +1,5 @@
 name: hello-world
-version: 1.0.3
+version: 1.0.4
 vendor: Michael Vogt <mvo@ubuntu.com>
 icon: meta/hello.svg
 binaries:
