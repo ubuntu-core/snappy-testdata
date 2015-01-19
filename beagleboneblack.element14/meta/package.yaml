@@ -1,0 +1,11 @@
+name: beagleboneblack.element14
+vendor: element14
+icon: meta/element14.png
+version: 1.0
+type: oem
+
+branding:
+    name: Beagle Bone Black
+    subname: element14
+store:
+    oem-key: 123456
