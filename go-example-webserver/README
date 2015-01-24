@@ -1,17 +1,27 @@
-
-Hello world!
+# Hello world!
 
 This is a snappy demo package that shows how to build and package a minimalistic webserver
 in golang for snappy.
 
 Just follow these steps and you are all set to start innovating in the snappy world:
 
- 1. go build .
- 2. snappy build .
+    go build .
+    mkdir magic-bin/x86_64-linux-gnu
+    mv go-example-webserver magic-bin/x86_64-linux-gnu/
+
+ And similarly for armhf:
+
+    GOARCH=arm go build .
+    mkdir magic-bin/arm-linux-gnueabihf
+    mv go-example-webserver magic-bin/arm-linux-gnueabihf/
+
+And finally build the snap
+
+    snappy build .
+
 
 This produces a snappy package for you that you can try on your snappy system.
 
 Have fun!
 
  - Snappy Team
-
