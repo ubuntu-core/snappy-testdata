@@ -1,5 +1,35 @@
-#!/bin/sh
+#!/usr/bin/python
 
-set -e
+import os.path
+import sys
+import yaml
 
-cat - > etc/message
+PKGNAME="config-example"
+MSG_FILE = os.path.join(os.environ["SNAP_APP_DATA_PATH"], "message")
+
+
+def get_config():
+   config = {"config": {
+               PKGNAME: {},
+               }
+            }
+   with open(MSG_FILE) as fp:
+      msg = fp.read()
+   config["config"]["config-example"]["msg"] = msg
+   return config
+
+
+def set_config():
+   config = yaml.load(sys.stdin)
+   if not config:
+      return
+   msg = config.get("config", {}).get(PKGNAME, {}).get("msg", "")
+   if msg:
+      with open(MSG_FILE, "w") as fp:
+         fp.write(msg)
+   
+
+if __name__ == "__main__":
+   set_config()
+   config = get_config()
+   yaml.dump(config, stream=sys.stdout, default_flow_style=False)

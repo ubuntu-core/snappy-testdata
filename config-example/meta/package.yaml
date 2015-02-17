@@ -1,5 +1,5 @@
 name: config-example
-version: 1.0
+version: 1.0.1
 vendor: Michael Vogt <mvo@ubuntu.com>
 icon: meta/hello.svg
 binaries:
