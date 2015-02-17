@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+HELPER=$(dirname $0)/snappy-yaml-helper
+
+CFG="$($HELPER /config/${SNAP_NAME}/msg)"
+if [ -n "$CFG" ]; then
+    printf "$CFG" > ${SNAP_APP_DATA_PATH}/message
+fi
+
+cat <<EOF
+config:
+ ${SNAP_NAME}:
+  msg: |
+   $(cat ${SNAP_APP_DATA_PATH}/message)
+EOF

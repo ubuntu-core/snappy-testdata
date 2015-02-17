@@ -1,0 +1,7 @@
+name: config-example-bash
+version: 1.0
+vendor: Michael Vogt <mvo@ubuntu.com>
+icon: meta/hello.svg
+binaries:
+ - name: bin/hello
+
