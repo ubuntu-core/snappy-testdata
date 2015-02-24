@@ -13,6 +13,8 @@ def get_config():
                PKGNAME: {},
                }
             }
+   if not os.path.exists(MSG_FILE):
+      return config
    with open(MSG_FILE) as fp:
       msg = fp.read()
    config["config"]["config-example"]["msg"] = msg
