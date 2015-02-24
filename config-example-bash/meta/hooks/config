@@ -4,14 +4,21 @@ set -e
 
 HELPER=$(dirname $0)/snappy-yaml-helper
 
-CFG="$($HELPER /config/${SNAP_NAME}/msg)"
+# read stdin with the "ypath" helper (if there is any input)
+CFG="$($HELPER /config/${SNAP_NAME}/msg 2>/dev/null || true)"
 if [ -n "$CFG" ]; then
     printf "$CFG" > ${SNAP_APP_DATA_PATH}/message
 fi
 
+# read existing message
+if [ -e "${SNAP_APP_DATA_PATH}/message" ]; then
+  msg=$(cat ${SNAP_APP_DATA_PATH}/message)
+fi
+
+# output current ocnfig
 cat <<EOF
 config:
  ${SNAP_NAME}:
   msg: |
-   $(cat ${SNAP_APP_DATA_PATH}/message)
+   $msg
 EOF
