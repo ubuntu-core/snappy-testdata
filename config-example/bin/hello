@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ -e ${SNAP_APP_DATA_PATH}/message ]; then
+    cat ${SNAP_APP_DATA_PATH}//message
+else
+    cat <<EOF2
+Hello from the config example!
+
+You can configure this message by running:
+
+$ cat > cfg.yaml <<'EOF'
+config:
+  config-example:
+    msg: |
+         Yay!
+EOF
+$ sudo snappy config config-example cfg.yaml
+
+
+The message you set there is then displayed when running:
+$ hello.config-example
+
+EOF2
+fi

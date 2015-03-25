@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+
+import sys
+import yaml
+
+
+class ParseError(Exception):
+    pass
+
+
+# maybe that name is a bit too grande ;)
+def parse_ypath(data, expr):
+    if not expr.startswith("/"):
+        raise ParseError("Only support absolute paths, got {}".format(expr))
+    path = expr[1:].split("/")
+    sub = data
+    for elm in path:
+        sub = sub[elm]
+    return sub
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("""Needs a path like /config/pkgname/key
+      
+Example usage:
+$ printf "config:\\n example:\\n  msg: foo "| {} /config/example/msg
+        """.format(sys.argv[0]))
+        sys.exit(1)
+    
+    # read stdin
+    input = sys.stdin.read()
+    data = yaml.safe_load(input)
+
+    # parse
+    term = sys.argv[1]
+    out = parse_ypath(data, term)
+
+    # and write it out
+    print(out)
