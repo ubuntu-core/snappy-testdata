@@ -1,4 +1,4 @@
-name: go-example-webserver
+name: go-example-webserver.canonical
 vendor: Alexander Sack <asac@canonical.com>
 architecture: [amd64, armhf]
 icon: meta/go.svg
