@@ -1,4 +1,4 @@
-name: config-example
+name: config-example.canonical
 version: 1.0.1
 vendor: Michael Vogt <mvo@ubuntu.com>
 icon: meta/hello.svg
