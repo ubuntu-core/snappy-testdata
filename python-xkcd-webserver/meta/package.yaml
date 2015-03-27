@@ -1,10 +1,9 @@
 name: xkcd-webserver.canonical
-version: 0.3.3
+version: 0.3.4
 vendor: Michael Vogt <michael.vogt@ubuntu.com>
 icon: meta/xkcd.svg
 services:
  - name: xkcd-webserver
-   start: bin/xkcd-webserver 
-ports:
- required: 80
+   start: bin/xkcd-webserver
+   description: A fun webserver
 
