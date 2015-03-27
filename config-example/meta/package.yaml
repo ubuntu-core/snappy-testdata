@@ -1,5 +1,5 @@
 name: config-example.canonical
-version: 1.0.1
+version: 1.0.2
 vendor: Michael Vogt <mvo@ubuntu.com>
 icon: meta/hello.svg
 binaries:
