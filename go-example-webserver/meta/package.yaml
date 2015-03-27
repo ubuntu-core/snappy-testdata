@@ -7,6 +7,4 @@ services:
  - name: webserver
    description: "snappy example: golang mini webserver"
    start: ./magic-bin/go-example-webserver
-ports:
- required: 8081
 
