@@ -15,7 +15,7 @@ if [ -e "${SNAP_APP_DATA_PATH}/message" ]; then
   msg=$(cat ${SNAP_APP_DATA_PATH}/message)
 fi
 
-# output current ocnfig
+# output current config
 cat <<EOF
 config:
  ${SNAP_NAME}:
