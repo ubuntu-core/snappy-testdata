@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="37"
+stroke="#321" transform="skewX(-13.6)">
+<path fill="none" stroke-width="4" d="m11,2.2h26v32H11z"/>
+<path stroke-width="13" stroke-dasharray="1.8,2.4" d="m25,11v15"/>
+<path stroke-width="2" stroke-dasharray="0,4.2" stroke-linecap="round" d="m16,12v15"/>
+</svg>

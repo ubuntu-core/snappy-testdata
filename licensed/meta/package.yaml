@@ -1,0 +1,8 @@
+name: licensed.canonical
+icon: meta/icon.svg
+version: 0.1
+vendor: John R. Lenton <john.lenton@canonical.com>
+binaries:
+ - name: bin/printenv
+explicit-license-agreement: Y
+
