@@ -1,5 +1,5 @@
-name: hello-world.canonical
-version: 1.0.5
+name: hello-world
+version: 1.0.8
 vendor: Michael Vogt <mvo@ubuntu.com>
 icon: meta/hello.svg
 binaries:
