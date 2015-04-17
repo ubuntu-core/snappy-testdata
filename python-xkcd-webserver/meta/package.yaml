@@ -1,5 +1,5 @@
-name: xkcd-webserver.canonical
-version: 0.3.4
+name: xkcd-webserver
+version: 0.3.6
 vendor: Michael Vogt <michael.vogt@ubuntu.com>
 icon: meta/xkcd.svg
 services:
