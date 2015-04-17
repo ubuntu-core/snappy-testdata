@@ -1,5 +1,5 @@
 name: hello-world
-version: 1.0.9
+version: 1.0.10
 vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
 icon: meta/hello.svg
 binaries:
