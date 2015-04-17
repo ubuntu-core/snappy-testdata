@@ -1,6 +1,6 @@
 name: hello-world
-version: 1.0.8
-vendor: Michael Vogt <mvo@ubuntu.com>
+version: 1.0.9
+vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
 icon: meta/hello.svg
 binaries:
  - name: bin/echo
