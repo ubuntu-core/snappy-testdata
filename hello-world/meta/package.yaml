@@ -4,6 +4,8 @@ vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
 icon: meta/hello.svg
 binaries:
  - name: bin/echo
+   caps: []
  - name: bin/env
+   caps: []
  - name: bin/evil
-
+   caps: []
