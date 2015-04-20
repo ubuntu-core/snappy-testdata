@@ -6,4 +6,6 @@ services:
  - name: xkcd-webserver
    start: bin/xkcd-webserver
    description: A fun webserver
-
+   caps:
+   - networking
+   - network-service
