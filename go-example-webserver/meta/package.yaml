@@ -1,10 +1,13 @@
-name: go-example-webserver.canonical
+name: go-example-webserver
 vendor: Alexander Sack <asac@canonical.com>
 architecture: [amd64, armhf]
 icon: meta/go.svg
-version: 1.0.4
+version: 1.0.6
 services:
  - name: webserver
    description: "snappy example: golang mini webserver"
    start: ./magic-bin/go-example-webserver
+   caps:
+    - networking
+    - network-service
 
