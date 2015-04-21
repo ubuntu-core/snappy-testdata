@@ -1,6 +1,6 @@
 name: xkcd-webserver
-version: 0.3.6
-vendor: Michael Vogt <michael.vogt@ubuntu.com>
+version: 0.4
+vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
 icon: meta/xkcd.svg
 services:
  - name: xkcd-webserver
