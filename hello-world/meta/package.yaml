@@ -1,5 +1,5 @@
 name: hello-world
-version: 1.0.12
+version: 1.0.13
 vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
 icon: meta/hello.svg
 binaries:
@@ -9,3 +9,6 @@ binaries:
    caps: []
  - name: bin/evil
    caps: []
+ - name: bin/showdev
+   caps: []
+
