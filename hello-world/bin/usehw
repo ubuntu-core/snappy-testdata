@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+echo "Hello hw-assign world!"
+
+echo "This example demonstrates the app confinement for assigned hardware"
+echo ""
+
+APPNAME=`echo $SNAP_APP_PATH | cut -f 3 -d '/'`
+if [ -z "$APPNAME" ]; then
+    echo "Could not determine application name."
+    exit 1
+fi
+hw=`udevadm trigger --verbose --dry-run --tag-match=snappy-assign --property-match=SNAPPY_APP="$APPNAME" | grep kmsg || true`
+if [ -z "$hw" ]; then
+    echo "No hardware is assigned for this device. Try adding /dev/kmsg with:"
+    echo "  $ sudo snappy hw-assign $APPNAME /dev/kmsg"
+else
+    echo "Good, '$hw' is assigned to us."
+    echo "Now try to read a line from /dev/kmsg:"
+    head -1 /dev/kmsg
+    echo ""
+    echo "It worked!"
+fi
