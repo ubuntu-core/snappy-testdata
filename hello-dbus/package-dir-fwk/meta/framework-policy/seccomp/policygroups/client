@@ -1,0 +1,11 @@
+# Description: allow using hello-dbus-fwk
+# Usage: common
+
+# for connecting to DBus
+connect
+getsockname
+recvmsg
+send
+sendto
+sendmsg
+socket

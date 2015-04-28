@@ -1,0 +1,84 @@
+# Description: default AppArmor template
+# Usage: common
+
+# vim:syntax=apparmor
+
+#include <tunables/global>
+
+# Specified profile variables
+###VAR###
+
+###PROFILEATTACH### (attach_disconnected) {
+  #include <abstractions/base>
+  #include <abstractions/openssl>
+  #include <abstractions/dbus-strict>
+
+  # LP: #1449625 workaround
+  /{,usr/}bin/uname ixr,
+
+  # Allow binding the service and receiving traffic
+  dbus (send)
+     bus=system
+     path=/org/freedesktop/DBus
+     interface=org.freedesktop.DBus
+     member=RequestName
+     peer=(name=org.freedesktop.DBus),
+
+  dbus (bind)
+    bus=system
+    name="com.canonical.hello-dbus-fwk",
+
+  dbus (receive)
+    bus=system
+    path=/com/canonical/HelloDbusFramework/DbusSrv
+    interface=com.canonical.HelloDbusFramework.DbusSrv,
+#    name=com.canonical.hello-dbus-fwk,
+
+  # user-specific bash files
+  /bin/bash ixr,
+  /bin/dash ixr,
+  /etc/bash.bashrc r,
+  /usr/share/terminfo/** r,
+  /etc/inputrc r,
+  deny @{HOME}/.inputrc r,
+
+  # Read-only for the install directory
+  @{CLICK_DIR}/@{APP_PKGNAME}/                   r,
+  @{CLICK_DIR}/@{APP_PKGNAME}/@{APP_VERSION}/    r,
+  @{CLICK_DIR}/@{APP_PKGNAME}/@{APP_VERSION}/**  mrklix,
+
+  # Read-only home area for other versions
+  owner @{HOMEDIRS}/*/apps/@{APP_PKGNAME}/                  r,
+  owner @{HOMEDIRS}/*/apps/@{APP_PKGNAME}/@{APP_VERSION}/   r,
+  owner @{HOMEDIRS}/*/apps/@{APP_PKGNAME}/@{APP_VERSION}/** mrkix,
+
+  # Writable home area for this version.
+  owner @{HOMEDIRS}/*/apps/@{APP_PKGNAME}/@{APP_VERSION}/   w,
+  owner @{HOMEDIRS}/*/apps/@{APP_PKGNAME}/@{APP_VERSION}/** wl,
+
+  # Read-only system area for other versions
+  /var/lib/apps/@{APP_PKGNAME}/   r,
+  /var/lib/apps/@{APP_PKGNAME}/** mrkix,
+
+  # TODO: the write on these is needed in case they doesn't exist, but means an
+  # app could adjust inode data and affect rollbacks.
+  owner @{HOMEDIRS}/*/apps/@{APP_PKGNAME}/         w,
+  /var/lib/apps/@{APP_PKGNAME}/                  w,
+
+  # Writable system area only for this version
+  /var/lib/apps/@{APP_PKGNAME}/@{APP_VERSION}/   w,
+  /var/lib/apps/@{APP_PKGNAME}/@{APP_VERSION}/** wl,
+
+  # Writable temp area only for this version (launcher will create this
+  # directory on our behalf so only allow readonly on parent).
+  /tmp/snaps/@{APP_PKGNAME}/                  r,
+  /tmp/snaps/@{APP_PKGNAME}/**                rk,
+  /tmp/snaps/@{APP_PKGNAME}/@{APP_VERSION}/   rw,
+  /tmp/snaps/@{APP_PKGNAME}/@{APP_VERSION}/** mrwlkix,
+
+  # Also do the same for shm
+  /{dev,run}/shm/snaps/@{APP_PKGNAME}/                  r,
+  /{dev,run}/shm/snaps/@{APP_PKGNAME}/**                rk,
+  /{dev,run}/shm/snaps/@{APP_PKGNAME}/@{APP_VERSION}/   r,
+  /{dev,run}/shm/snaps/@{APP_PKGNAME}/@{APP_VERSION}/** mrwlkix,
+}

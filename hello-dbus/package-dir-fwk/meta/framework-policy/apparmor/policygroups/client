@@ -1,0 +1,11 @@
+# Description: allow using hello-dbus-fwk
+# Usage: common
+
+#include <abstractions/dbus-strict>
+
+dbus (send)
+  bus=system
+  path=/com/canonical/HelloDbusFramework/DbusSrv
+  interface=com.canonical.HelloDbusFramework.DbusSrv
+  member=Method
+  peer=(label=hello-dbus-fwk_srv_*),

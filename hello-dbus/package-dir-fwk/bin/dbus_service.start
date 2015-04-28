@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+if [ -z "$SNAPPY_APP_ARCH" ]; then
+    SNAPPY_APP_ARCH=`$SNAP_APP_PATH/bin/get_arch`
+fi
+
+$SNAP_APP_PATH/bin/dbus_service.$SNAPPY_APP_ARCH --system --name="com.canonical.hello-dbus-fwk" "/com/canonical/HelloDbusFramework/DbusSrv" "com.canonical.HelloDbusFramework.DbusSrv"

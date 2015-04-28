@@ -1,0 +1,13 @@
+name: hello-dbus-app
+version: 1.0.0
+architecture: [amd64, armhf, i386]
+vendor: Jamie Strandboge <jamie@canonical.com>
+icon: meta/hello.svg
+frameworks:
+  - hello-dbus-fwk
+binaries:
+  - name: client
+    exec: bin/dbus_message.client
+    description: "hello-dbus-fwk test client"
+    caps:
+      - hello-dbus-fwk_client

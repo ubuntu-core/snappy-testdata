@@ -1,0 +1,14 @@
+name: hello-dbus-fwk
+version: 1.0.0
+architecture: [amd64, armhf, i386]
+vendor: Jamie Strandboge <jamie@canonical.com>
+icon: meta/hello.svg
+type: framework
+services:
+ - name: srv
+   start: bin/dbus_service.start
+   description: "hello-dbus-fwk test service"
+   bus-name: "com.canonical.hello-dbus-fwk"
+   security-policy:
+     apparmor: meta/svc.apparmor
+     seccomp: meta/svc.seccomp
