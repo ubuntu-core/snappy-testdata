@@ -32,7 +32,6 @@
     bus=system
     path=/com/canonical/HelloDbusFramework/DbusSrv
     interface=com.canonical.HelloDbusFramework.DbusSrv,
-#    name=com.canonical.hello-dbus-fwk,
 
   # user-specific bash files
   /bin/bash ixr,
