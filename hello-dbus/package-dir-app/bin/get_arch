@@ -1,1 +1,21 @@
-../../package-dir-fwk/bin/get_arch
+#!/bin/sh
+set -e
+
+# Workaround LP: #1449625
+
+platform=`uname -i`
+case $platform in
+  x86_64)
+    echo "amd64"
+    ;;
+  armv7l)
+    echo "armhf"
+    ;;
+  i386)
+    echo "i386"
+    ;;
+  *)
+    echo "unknown platform for snappy-magic"
+    exit 1
+    ;;
+esac
