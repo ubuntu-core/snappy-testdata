@@ -1,7 +1,7 @@
 name: hello-world
 version: 1.0.14
 vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
-icon: meta/hello.svg
+icon: meta/hello.png
 binaries:
  - name: bin/echo
    caps: []
