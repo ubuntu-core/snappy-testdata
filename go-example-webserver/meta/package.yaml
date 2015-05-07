@@ -2,7 +2,7 @@ name: go-example-webserver
 vendor: Alexander Sack <asac@canonical.com>
 architecture: [amd64, armhf]
 icon: meta/go.png
-version: 1.0.6
+version: 1.0.7
 services:
  - name: webserver
    description: "snappy example: golang mini webserver"
