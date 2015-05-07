@@ -1,7 +1,7 @@
 name: xkcd-webserver
 version: 0.4
 vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
-icon: meta/xkcd.svg
+icon: meta/xkcd.png
 services:
  - name: xkcd-webserver
    start: bin/xkcd-webserver

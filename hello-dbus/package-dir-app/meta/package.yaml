@@ -2,7 +2,7 @@ name: hello-dbus-app
 version: 1.0.1
 architecture: [amd64, armhf, i386]
 vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
-icon: meta/hello.svg
+icon: meta/hello.png
 frameworks:
   - hello-dbus-fwk
 binaries:
