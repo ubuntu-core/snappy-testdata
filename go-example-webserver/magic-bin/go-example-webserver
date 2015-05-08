@@ -24,15 +24,15 @@ case $platform in
     ;;
 esac
 
-# workaround that snappy services have bogus SNAPP_ vars set; assume PWD is right
-echo "$SNAPP_APP_PATH" | grep -q SNAPP_APP && SNAPP_APP_PATH=$PWD
-if test -z "$SNAPP_APP_PATH"; then
-  SNAPP_APP_PATH=$PWD
+# workaround that snappy services have bogus SNAP_ vars set; assume PWD is right
+echo "$SNAP_APP_PATH" | grep -q SNAP_APP && SNAP_APP_PATH=$PWD
+if test -z "$SNAP_APP_PATH"; then
+  SNAP_APP_PATH=$PWD
 fi
 
 snapp_bin_path=$0
 snapp_bin=`basename $snapp_bin_path`
-snapp_dir=$SNAPP_APP_PATH
+snapp_dir=$SNAP_APP_PATH
 snapp_name=`echo $snapp_bin | sed -e 's/\(.*\)[.]\([^.]*\)$/\1/g'`
 snapp_org_bin=`echo $snapp_bin | sed -e 's/\(.*\)[.]\([^.]*\)$/\2/g'`
 
