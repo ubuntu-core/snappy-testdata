@@ -18,7 +18,7 @@ To build simply do this:
  4. GOARCH=arm go build ../../
 
  # go to top level dir and build the snapp
- 5. cd ..
+ 5. cd ../..
  6. snappy build .
 
 This produces a snappy package for you that you can try on your snappy system.
