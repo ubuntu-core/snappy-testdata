@@ -42,17 +42,6 @@ $verbose && echo snapp_dir: $snapp_dir
 $verbose && echo snapp_org_bin: $snapp_org_bin
 $verbose && echo plat_abi: $plat_abi
 
-# check if this was run from outside the launcher
-if [ -z "$SNAP_APP_NAME" ]; then
-    cat <<'EOF'
-
-Looks like this is run this manually for debugging. Please
-make sure to run it from inside the apps directory (usually in
-/apps/$pkgname/$version).
-
-EOF
-fi
-
 PATH="$snapp_dir/magic-bin/$plat_abi/:$PATH"
 LD_LIBRARY_PATH="$snapp_dir/lib/$plat_abi/:$LD_LIBRARY_PATH"
 export PATH LD_LIBRARY_PATH
