@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+echo "Launching a shell inside the default app confinement"
+
+/bin/sh
