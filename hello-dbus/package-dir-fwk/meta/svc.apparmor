@@ -16,18 +16,20 @@
   # LP: #1449625 workaround
   /{,usr/}bin/uname ixr,
 
-  # Allow binding the service and receiving traffic
+  # Allow requesting a connection name and also releasing it
   dbus (send)
      bus=system
      path=/org/freedesktop/DBus
      interface=org.freedesktop.DBus
-     member=RequestName
+     member={Request,Release}Name
      peer=(name=org.freedesktop.DBus),
 
+  # Allow binding the service to the requested connection name
   dbus (bind)
     bus=system
     name="com.canonical.hello-dbus-fwk",
 
+  # Allow receiving traffic to our path and interface with any method
   dbus (receive)
     bus=system
     path=/com/canonical/HelloDbusFramework/DbusSrv

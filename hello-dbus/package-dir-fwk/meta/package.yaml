@@ -1,5 +1,5 @@
 name: hello-dbus-fwk
-version: 1.0.0
+version: 1.0.1
 architecture: [amd64, armhf, i386]
 vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
 icon: meta/hello.png
