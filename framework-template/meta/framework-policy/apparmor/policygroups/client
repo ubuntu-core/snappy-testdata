@@ -15,4 +15,4 @@
 # /var/lib/apps/fwk-name/*/svc.sock rw,
 
 # Eg, abstract socket rule
-# unix (connect, send, receive) peer=(label=fwk-name_svc_*),
+unix (connect, send, receive) peer=(label=fwk-name_svc_*),

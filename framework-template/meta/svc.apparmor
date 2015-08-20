@@ -49,8 +49,11 @@
   /tmp/** mrwlkix,
 
   # Framework service/binary specific rules below this line
-  #include <abstractions/nameservice>
   #include <abstractions/python>
   /usr/bin/python3* ixr,
-  /etc/mime.types r,
+  /etc/passwd r,
+  /etc/group r,
+  /etc/nsswitch.conf r,
+  unix type=stream addr="@fwk-name.sock",
+
 }

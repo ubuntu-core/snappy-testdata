@@ -1,12 +1,28 @@
 #!/usr/bin/python3
 
 import sys
-import urllib.request
+import socket
 
-if len(sys.argv) > 1:
-    port = int(sys.argv[1])
-else:
-    port = 8080
+sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+fn = "\0fwk-name.sock"
+try:
+    sock.connect(fn)
+except socket.error as e:
+    print(e)
+    sys.exit(1)
 
-x = urllib.request.urlopen('http://127.0.0.1:%d' % port)
-print(x.read())
+try:
+    preamble = "Received: "
+    message = "hi there!"
+    sock.sendall(bytes(message, 'utf-8'))
+    amount_received = 0
+    amount_expected = len(preamble) + len(message)
+
+    s = ""
+    while amount_received < amount_expected:
+        data = sock.recv(16)
+        amount_received += len(data)
+        s += data.decode('ascii')
+    print(s)
+finally:
+    sock.close()

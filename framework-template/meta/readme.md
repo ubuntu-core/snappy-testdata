@@ -1,8 +1,14 @@
 fwk-name test service and framework-policy
 
-This can be used as a template.
+This can be used as a template. The example code provides a simple web server
+and a cli command to access it.
 
-For strict confinement, use (adjusting as necessary):
+For strict confinement for new projeccts, use (adjusting as necessary):
+  security-policy:
+    apparmor: meta/svc.apparmor.template
+    seccomp: meta/svc.seccomp.template
+
+For strict confinement that works with the example code, use:
   security-policy:
     apparmor: meta/svc.apparmor
     seccomp: meta/svc.seccomp

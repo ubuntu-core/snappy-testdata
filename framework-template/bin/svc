@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+
+import socket
+import sys
+import os
+
+fn = "\0fwk-name.sock"
+
+sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+sock.bind(fn)
+sock.listen(1)
+
+while True:
+    connection, client_address = sock.accept()
+    try:
+        data = connection.recv(16)
+        if data:
+            connection.sendall(bytes("Received: %s" % data.decode('ascii'),
+                                     'utf-8'))
+        else:
+            break
+    finally:
+        connection.close()
