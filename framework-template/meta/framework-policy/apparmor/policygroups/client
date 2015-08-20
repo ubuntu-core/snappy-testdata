@@ -14,5 +14,5 @@
 # Eg, named socket/file rule
 # /var/lib/apps/fwk-name/*/svc.sock rw,
 
-# Eg, abstract socket rule
+# Eg, abstract socket rule (the below works with the example code)
 unix (connect, send, receive) peer=(label=fwk-name_svc_*),

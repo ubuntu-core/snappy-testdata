@@ -3,7 +3,8 @@
 
 # Add any additional syscalls needed to access your framework
 
-# Eg, can communicate with fwk-name_svc abstract socket
+# Eg, can communicate with fwk-name_svc abstract socket (this works with the
+# example code)
 connect
 getsockname
 recv
