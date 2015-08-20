@@ -1,0 +1,4 @@
+#
+# Unrestricted seccomp policy for fwk-name_svc
+#
+@unrestricted

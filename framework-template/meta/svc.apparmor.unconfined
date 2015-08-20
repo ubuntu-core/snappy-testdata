@@ -1,0 +1,28 @@
+#
+# Unrestricted AppArmor policy for fwk-name_svc
+#
+
+#include <tunables/global>
+
+# Specified profile variables
+###VAR###
+
+# This profile offers no protection at all and is provided to ease initial
+# framework packaging until something based on svc.apparmor can be used
+# instead.
+###PROFILEATTACH### (attach_disconnected) {
+  capability,
+  network,
+  / rwkl,
+  /** rwlkm,
+  /** pix,
+
+  mount,
+  remount,
+  umount,
+  pivot_root,
+  dbus,
+  signal,
+  ptrace,
+  unix,
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+import sys
+import urllib.request
+
+if len(sys.argv) > 1:
+    port = int(sys.argv[1])
+else:
+    port = 8080
+
+x = urllib.request.urlopen('http://127.0.0.1:%d' % port)
+print(x.read())

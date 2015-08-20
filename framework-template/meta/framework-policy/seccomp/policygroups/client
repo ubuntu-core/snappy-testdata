@@ -1,0 +1,16 @@
+# Description: allow using fwk-name
+# Usage: common
+
+# Add any additional syscalls needed to access your framework
+
+# Eg, DBus syscalls
+# connect
+# getsockname
+# recvmsg
+# send
+# sendto
+# sendmsg
+# socket
+
+# UNIX socket
+# socketpair

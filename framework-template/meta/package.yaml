@@ -1,0 +1,19 @@
+name: fwk-name
+version: 0.0.1
+vendor: Your Name <your.name@vendor.com>
+icon: meta/hello.png
+type: framework
+services:
+ - name: svc
+   start: bin/svc.start
+   description: "Example service"
+   security-policy:
+     apparmor: meta/svc.apparmor
+     seccomp: meta/svc.seccomp
+binaries:
+ - name: cli
+   exec: bin/cli
+   description: "Example command that uses the above service"
+   caps:
+    - fwk-name_client
+    - network-client

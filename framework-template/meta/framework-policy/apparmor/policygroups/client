@@ -1,0 +1,18 @@
+# Description: allow using fwk-name
+# Usage: common
+
+# Add any AppArmor rules here needed to access your framework
+
+# Eg, dbus rule
+# dbus (send)
+#   bus=system
+#   path=/com/vendor/FwkName/Svc
+#   interface=com.vendor.FwkName.Svc
+#   member=Method
+#   peer=(label=fwk-name_src_*),
+
+# Eg, named socket/file rule
+# /var/lib/apps/fwk-name/*/svc.sock rw,
+
+# Eg, abstract socket rule
+# unix (connect, send, receive) peer=(label=fwk-name_svc_*),
