@@ -6,6 +6,6 @@ echo "Hello Evil World!"
 echo "This example demonstrates the app confinement"
 echo "You should see a permission denied error next"
 
-echo "Haha" > /tmp/myevil.txt
+echo "Haha" > /var/tmp/myevil.txt
 
 echo "If you see this line the confinement is not working correctly, please file a bug"
