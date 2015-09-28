@@ -1,6 +1,9 @@
 name: hello-dbus-fwk
-version: 1.0.1
-architecture: [amd64, armhf, i386]
+version: 1.0.2
+architectures:
+  - amd64
+  - armhf
+  - i386
 vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
 icon: meta/hello.png
 type: framework
