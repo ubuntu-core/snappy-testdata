@@ -18,7 +18,7 @@ $ sudo snappy config config-example cfg.yaml
 
 
 The message you set there is then displayed when running:
-$ hello.config-example
+$ config-example.hello
 
 EOF2
 fi

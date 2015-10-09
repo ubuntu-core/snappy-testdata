@@ -4,7 +4,7 @@ vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
 icon: meta/xkcd.png
 services:
  - name: xkcd-webserver
-   start: bin/xkcd-webserver
+   start: ./bin/xkcd-webserver
    description: A fun webserver
    caps:
    - networking

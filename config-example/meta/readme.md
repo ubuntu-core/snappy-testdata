@@ -4,6 +4,6 @@ This is a simple example to how how to write a configure hook.
 
 Run:
 
- hello.config-example
+ config-example.hello
 
 for usage instructions.
