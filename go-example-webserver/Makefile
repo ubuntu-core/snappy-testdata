@@ -1,19 +1,27 @@
+.DEFAULT_GOAL := snap
+
+DESTDIR ?= .
+SNAPNAME = $(shell find ./magic-bin/ -type f -printf "%f\n" | head -1)
+
 magic-bin/x86_64-linux-gnu:
-	mkdir ./magic-bin/x86_64-linux-gnu
+	mkdir $(DESTDIR)/magic-bin/x86_64-linux-gnu --parents
 
 magic-bin/arm-linux-gnueabihf:
-	mkdir ./magic-bin/arm-linux-gnueabihf
+	mkdir $(DESTDIR)/magic-bin/arm-linux-gnueabihf --parents
 
 build_amd64: magic-bin/x86_64-linux-gnu
-	cd ./magic-bin/x86_64-linux-gnu && \
-		go build ../../
+	cd $(DESTDIR)/magic-bin/x86_64-linux-gnu && \
+		go build ../../ && mv build $(SNAPNAME)
 
 build_arm: magic-bin/arm-linux-gnueabihf
-	cd ./magic-bin/arm-linux-gnueabihf && \
-		GOARCH=arm go build ../../
+	cd $(DESTDIR)/magic-bin/arm-linux-gnueabihf && \
+		GOARCH=arm go build ../../ && mv build $(SNAPNAME)
 
 snap: build_amd64 build_arm
-	snappy build .
+	#snappy build .
+
+install:
+	cp -R  ../build/magic-bin ../install/
 
 clean:
 	rm -rf ./magic-bin/x86_64-linux-gnu

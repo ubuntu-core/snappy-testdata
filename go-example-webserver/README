@@ -9,12 +9,9 @@ to find the right architecture and launch the right binary.
 
 To build simply do this:
 
- make snap
+ snapcraft
 
 This produces a snappy package for you that you can try on your snappy system.
-
- cd /apps/go-example-webserver.*/current
- sudo ./magic-bin/go-example-webserver
 
 Have fun!
 
