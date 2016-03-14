@@ -1,5 +1,5 @@
 name: xkcd-webserver
-version: 16.04-2
+version: 16.04-3
 summary: Python based example webserver
 description: |
  Show random XKCD comic via a build-in webserver
