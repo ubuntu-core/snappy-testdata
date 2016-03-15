@@ -1,0 +1,18 @@
+name: xkcd-webserver
+version: 16.04-4
+summary: Python based example webserver
+description: |
+ Show random XKCD comic via a build-in webserver
+ This is meant as a fun example for a snappy package.
+apps:
+ xkcd-webserver:
+  command: ./bin/xkcd-webserver
+  daemon: simple
+  description: A fun webserver
+  plugs: [xkcd-webserver]
+plugs:
+ xkcd-webserver:
+  interface: old-security
+  caps:
+   - network-client
+   - network-service
