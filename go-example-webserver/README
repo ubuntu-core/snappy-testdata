@@ -9,17 +9,7 @@ to find the right architecture and launch the right binary.
 
 To build simply do this:
 
- # change to the x86_64 directory and build the binary...
- 1. cd magic-bin/x86_64-linux-gnu
- 2. go build ../../
-
- # switch to the armhf directory and build for ARM
- 3. cd ../arm-linux-gnueabihf
- 4. GOARCH=arm go build ../../
-
- # go to top level dir and build the snapp
- 5. cd ../..
- 6. snappy build .
+ snapcraft
 
 This produces a snappy package for you that you can try on your snappy system.
 

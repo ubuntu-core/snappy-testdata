@@ -1,0 +1,18 @@
+name: go-example-webserver
+version: 1.0.7
+vendor: Alexander Sack <asac@canonical.com>
+summary: Go Webserver
+description: "Minimal Golang webserver for snappy \n\nMostly a example to show how to build a binary webserver for snappy."
+architectures: [armhf, amd64]
+icon: go.png
+services:
+   webserver:
+      description: "snappy example: golang mini webserver"
+      start: ./magic-bin/go-example-webserver
+      caps:
+       - networking
+       - network-service
+parts:
+   magic-bin:
+      plugin: make
+      source: .
